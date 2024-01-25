@@ -1,0 +1,156 @@
+* {
+  font-family: JetBrainsMono Nerd Font, feather;
+  font-weight: 900;
+  font-size: 12px;
+  color: #c0caf5;
+  min-height: 10px;
+}
+
+/* Set background color of main waybar window */
+window#waybar {
+  background: rgba(21, 22, 30, 0.5);
+  /* background: red; */
+}
+
+/* Set background color of tooltips */
+tooltip {
+  background: #1e1e2e;
+}
+
+/* Set workspace text color and padding */
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.active {
+  background: #414868;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+  background: #414868;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#network,
+#battery,
+#bluetooth,
+#custom-kernel,
+#custom-pacman,
+#workspaces,
+#clock,
+#window,
+#temperature,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#taskbar,
+#mpd {
+  /* background: rgba(21, 22, 30, 0.7); */
+  background: #24283b;
+  padding: 0 10px;
+  margin: 6px 0 3px 0;
+  border: 0;
+}
+
+#workspaces {
+  border-radius: 9px;
+  margin-left: 10px;
+  padding: 2px;
+}
+
+
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button.active {
+  background: #7aa2f7;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover {
+  background: #24283b;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+
+#taskbar {
+  border-radius: 9px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+
+
+/* Set up rounding to make these modules look like separate pills */
+#mpd {
+  border-radius: 9px;
+  margin-left: 5px;
+}
+
+#network {
+  border-radius: 9px 0 0 9px;
+}
+
+#clock {
+  border-radius: 9px 9px 9px 9px;
+  margin-left: 5px;
+}
+
+#tray {
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+#window {
+  border-radius: 8px;
+}
+
+/* Rounding only on left of module */
+#temperature {
+  border-radius: 8px 0 0 8px;
+}
+
+/* Rounding only on right of module(s) */
+#custom-pacman,
+#custom-kernel {
+  border-radius: 0 8px 8px 0;
+}
+
+#battery {
+  border-radius: 0 8px 8px 0;
+  margin-right: 5px;
+}

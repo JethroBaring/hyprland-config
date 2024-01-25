@@ -1,0 +1,171 @@
+* {
+  font-family: JetBrainsMono Nerd Font, feather;
+  font-weight: 900;
+  font-size: 12px;
+  color: #c0caf5;
+  min-height: 10px;
+}
+
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+@define-color main-bg #24283b;
+@define-color main-fg #7aa2f7;
+
+@define-color wb-act-bg #bb9af7;
+@define-color wb-act-fg #b4f9f8;
+
+@define-color wb-hvr-bg #7aa2f7;
+@define-color wb-hvr-fg #cfc9c2;
+
+/* Set background color of main waybar window */
+window#waybar {
+  background: rgba(21, 22, 30, 0.5);
+}
+
+/* Set background color of tooltips */
+tooltip {
+  background: #1e1e2e;
+}
+
+/* Set workspace text color and padding */
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 9px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  color: @main-fg;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.active {
+  background: @wb-act-bg;
+  color: @wb-act-fg;
+  margin-left: 3px;
+  margin-right: 3px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-fg;
+  padding-left: 3px;
+  padding-right: 3px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#network,
+#battery,
+#bluetooth,
+#custom-kernel,
+#custom-pacman,
+#workspaces,
+#clock,
+#window,
+#temperature,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#taskbar,
+#mpd {
+  /* background: rgba(21, 22, 30, 0.7); */
+  background: #24283b;
+  padding: 0 10px;
+  margin: 3px 0;
+  border: 0;
+}
+
+#workspaces {
+  border-radius: 9px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @wb-color;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button.active {
+  background: @wb-act-bg;
+  color: @wb-act-color;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-color;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar {
+  border-radius: 9px;
+  margin-left: 10px;
+  padding: 3px;
+}
+
+
+
+/* Set up rounding to make these modules look like separate pills */
+#mpd {
+  border-radius: 9px;
+  margin-left: 4px;
+}
+
+#network {
+  border-radius: 9px 0 0 9px;
+}
+
+#clock {
+  border-radius: 9px 9px 9px 9px;
+  margin-left: 10px;
+}
+
+#tray {
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+#window {
+  border-radius: 8px;
+}
+
+/* Rounding only on left of module */
+#temperature {
+  border-radius: 8px 0 0 8px;
+}
+
+/* Rounding only on right of module(s) */
+#custom-pacman,
+#custom-kernel {
+  border-radius: 0 8px 8px 0;
+}
+
+#battery {
+  border-radius: 0 8px 8px 0;
+  margin-right: 10px;
+}

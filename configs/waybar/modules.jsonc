@@ -1,0 +1,94 @@
+{
+  // Modules configuration
+  "clock": {
+    "format": "<span color=\"#7aa2f7\"></span> {:%I:%M %p 󰃭 %a %d}",
+    "interval": 1
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "<span color=\"#7aa2f7\">󰤨</span> {essid}",
+    "format-ethernet": "󱘖 Wired",
+    "tooltip-format": "󱘖 {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-linked": "󱘖 {ifname} (No IP)",
+    "format-disconnected": " Disconnected",
+    "interval": 5,
+    "on-click": ".config/rofi/launchers/wifi.sh"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span color=\"#7aa2f7\"></span> {capacity}% ",
+    "format-plugged": "<span color=\"#7aa2f7\"></span> {capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Tela-circle-dracula",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+        "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-connected": "<span color=\"#7aa2f7\"></span> {device_alias}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias}",
+    "on-click": ".config/rofi/launchers/bluetooth.sh"
+  },
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
+    "format-muted": "<span color=\"#f7768e\"> </span>Muted",
+    "format-icons": ["", "", ""],
+    "on-click": "pavucontrol"
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 48
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
+
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate"
+  },
+
+  "mpd": {
+    "format": "<span color=\"#7aa2f7\">{stateIcon} </span>{artist} - {title}",
+    "format-paused": "",
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    }
+  },
+   "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "persistent-workspaces": {
+        }
+    },
+}

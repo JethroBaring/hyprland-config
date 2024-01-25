@@ -18,7 +18,7 @@ configuration {
 // Main //
 window {
     height:                      450px;
-    width:                       1000px;
+    width:                       800px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -28,6 +28,7 @@ window {
     border:                      2px;
     border-radius:               40px;
     //border-color:                @alternate-normal-background;//
+    border-color: #24283b;
     background-color:            transparent;
 }
 mainbox {
@@ -37,18 +38,18 @@ mainbox {
     children:                    [  "inputbar" , "listbox" ];
     background-color:            transparent;
     // background-image:            url("~/.config/swww/wall.blur", height); //
-    background-image:            url("~/.themes/rain.png", height);
+    background-image:            url("~/.themes/tokyonight.jpg", height);
 }
 
 
 // Inputs //
 inputbar {
     enabled:                     true;
-    width:                       25%;
+    width:                       400px;
     children:                    [ "mode-switcher" , "entry" ];
     background-color:            transparent;
     //background-image:            url("~/.config/swww/wall.rofi", height);//
-    background-image:            url("~/.themes/rain.png", height);
+    background-image:            url("~/.themes/tokyonight.jpg", height);
 }
 entry {
     enabled:                     false;
@@ -65,7 +66,7 @@ mode-switcher{
     spacing:                     25px;
     background-color:            transparent;
     //background-image:            url("~/.config/swww/wall.blur", height);//
-    background-image:            url("~/.themes/rain.png", height);
+    background-image:            url("~/.themes/tokyonight.jpg", height);
 }
 button {
 

@@ -8,7 +8,7 @@
 # Import Current Theme
 
 dir="$HOME/.config/rofi/launchers/"
-theme='style_4'
+theme='tokyonight'
 
 # Theme Elements
 prompt='Select GPU'
@@ -17,17 +17,10 @@ list_row='2'
 efonts="JetBrains Mono Nerf Font 10"
 
 # Options
-option_1=" Dedicated GPU"
-option_2=" Integrated GPU"
+option_1="󰾲 Nvidia GPU"
+option_2="󰾲 Integrated GPU"
 
-gpu_info=$(lspci | grep -i GeForce)
-
-if [[ -z "$gpu_info" ]]; then
-	default_option="$option_2"
-else
-	default_option="$option_1"
-fi
-
+gpu_status=$(envycontrol --query)
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
@@ -37,21 +30,26 @@ rofi_cmd() {
 # Pass variables to rofi dmenu
 run_rofi() {
 	
-	if [[ -z "$gpu_info" ]]; then
-		echo -e "$option_2\n$option_1" | rofi_cmd
-	else
+	if [ $gpu_status = "hybrid" ]; then
 		echo -e "$option_1\n$option_2" | rofi_cmd
+	else
+		echo -e "$option_2\n$option_1" | rofi_cmd
 	fi
 }
 
 # Execute Command
 run_cmd() {
-	if [[ "$1" == '--opt1' ]]; then
-		sudo envycontrol -s hybrid
+	if [ $1 = "--opt1" ]; then
+		echo "test"
+		echo 'jyty12321' | sudo -S envycontrol -s hybrid
 		reboot
-	elif [[ "$1" == '--opt2' ]]; then
-		sudo envycontrol -s integrated
+		echo "test2"
+
+	elif [ $1 = "--opt2" ]; then
+		echo "test"
+		echo 'jyty12321' | sudo -S envycontrol -s integrated
 		reboot
+		echo "test2"
 	fi
 }
 

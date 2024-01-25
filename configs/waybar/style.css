@@ -23,8 +23,8 @@ tooltip {
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   margin-left: 2px;
   margin-right: 2px;
   animation: gradient_f 20s ease-in infinite;
@@ -33,16 +33,16 @@ tooltip {
 
 #workspaces button.active {
   background: #414868;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
   background: #414868;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -63,6 +63,9 @@ tooltip {
 #pulseaudio,
 #tray,
 #taskbar,
+#custom-notification,
+#custom-calendar,
+#custom-gpu,
 #mpd {
   /* background: rgba(21, 22, 30, 0.7); */
   background: #24283b;
@@ -73,7 +76,7 @@ tooltip {
 
 #workspaces {
   border-radius: 9px;
-  margin-left: 10px;
+  margin-left: 6px;
   padding: 2px;
 }
 
@@ -82,7 +85,7 @@ tooltip {
   box-shadow: none;
   text-shadow: none;
   border-radius: 9px;
-  padding-left: 5px;
+  padding-left: 8px;
   padding-right: 5px;
   margin-left: 2px;
   margin-right: 2px;
@@ -91,16 +94,16 @@ tooltip {
 }
 
 #taskbar button.active {
-  background: #7aa2f7;
-  padding-left: 5px;
+  background: #414868;
+  padding-left: 8px;
   padding-right: 5px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button:hover {
-  background: #24283b;
-  padding-left: 5px;
+  background: #414868;
+  padding-left: 8px;
   padding-right: 5px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
@@ -110,10 +113,12 @@ tooltip {
 #taskbar {
   border-radius: 9px;
   margin-left: 10px;
-  padding: 0px;
+  padding: 2px;
 }
 
-
+#taskbar.empty {
+  background: transparent;
+}
 
 /* Set up rounding to make these modules look like separate pills */
 #mpd {
@@ -121,22 +126,36 @@ tooltip {
   margin-left: 5px;
 }
 
-#network {
+#custom-notification {
   border-radius: 9px 0 0 9px;
 }
 
 #clock {
-  border-radius: 9px 9px 9px 9px;
-  margin-left: 5px;
+  border-radius: 9px 0 0 9px;
+  margin-left: 6px;
+}
+
+#custom-calendar {
+  border-radius: 0 9px 9px 0;
+  padding-left: 0;
+}
+
+#custom-fedora {
+  padding: 0 10px;
+  padding-right: 15px;
+  color: #7aa2f7;
+  border-radius: 9px;
+  background: #24283b;
+  margin: 6px 0 3px 6px;
 }
 
 #tray {
-  border-radius: 8px;
-  margin-right: 4px;
+  border-radius: 9px;
+  margin-right: 6px;
 }
 
 #window {
-  border-radius: 8px;
+  border-radius: 9px;
 }
 
 /* Rounding only on left of module */
@@ -151,6 +170,33 @@ tooltip {
 }
 
 #battery {
-  border-radius: 0 8px 8px 0;
-  margin-right: 5px;
+  padding-right: 0;
 }
+
+#custom-power {
+  padding: 0 10px;
+  padding-right: 13px;
+  background-color: #24283b;
+  border-radius: 0 9px 9px 0;
+  color: #7aa2f7;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+
+/* #battery {
+  padding-right: 4px;
+  border-radius: 0 9px 9px 0;
+}
+
+#custom-power {
+  padding: 0 10px;
+  padding-right: 13px;
+  background-color: #24283b;
+  border-radius: 9px;
+  color: #7aa2f7;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  margin-right: 6px;
+  margin-left: 6px;
+} */

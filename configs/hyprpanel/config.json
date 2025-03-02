@@ -1,0 +1,63 @@
+{
+  "theme.bar.floating": true,
+  "theme.bar.location": "top",
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.enableShadow": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "theme.bar.buttons.workspaces.pill.radius": "1.9rem * 0.6",
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.style": "default",
+  "theme.bar.buttons.radius": "8px",
+  "theme.bar.margin_top": "6px",
+  "theme.bar.margin_sides": "3px",
+  "theme.bar.buttons.innerRadiusMultiplier": "0.4",
+  "theme.bar.outer_spacing": "0",
+  "menus.media.hideAlbum": false,
+  "menus.clock.weather.enabled": false,
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.size": "12px",
+  "notifications.active_monitor": true,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.margin_bottom": "3px",
+  "theme.bar.buttons.y_margins": "0",
+  "theme.bar.buttons.borderSize": "0.3px",
+  "theme.bar.menus.monochrome": false,
+  "theme.bar.menus.border.size": "1px",
+  "theme.bar.menus.border.radius": "0.4em",
+  "menus.dashboard.powermenu.avatar.name": "Jeth",
+  "menus.dashboard.powermenu.avatar.image": "/home/jyty/Downloads/hyprland-config/themes/cat.jpg",
+  "bar.launcher.autoDetectIcon": true
+}
